@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class="invoices content">
+  <div class="center">
+    <h1 class="center-h1">Invoices</h1>
+  </div>
+
+  <div class="description">
+    <mat-card
+      style="
+        margin: 0 -10rem;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 20px;
+        font-family: description;">
+    All emitted <b>invoices</b> from Tech Hotel are displayed down bellow.
+    </mat-card>
+  </div>
+  
+  <div class="child-table">
+  <app-invoice-list [invoiceList]="invoiceList"></app-invoice-list>
+  </div>
+</div>

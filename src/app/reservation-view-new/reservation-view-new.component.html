@@ -1,0 +1,88 @@
+<app-navbar></app-navbar>
+
+<div class="Reservation content">
+    <div class="center">
+        <h1 class="center-h1">Rooms Reservations</h1>
+    </div>
+
+    <div class="register_information">
+        <mat-card style="
+        margin: 0 -10rem;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 20px;
+        font-family: description;">
+    Our hotel displays to all our customer a total of 15 regular rooms and 5 suites, make a reservation down below.
+    </mat-card>
+    </div>
+
+<div *ngIf="basicUser.roomId===null || basicUser.roomId===0" class="parent">
+<form [formGroup]="todoForm" (ngSubmit)="submitForm()" class="example-form">
+
+    <mat-form-field appearance="outline">
+        <mat-label>Type Of Room</mat-label>
+        <mat-select formControlName="roomType" matNativeControl required>
+            <mat-option value="REGULAR_ROOM">Regular Room</mat-option>
+            <mat-option value="SUITE_ROOM">Suite Room</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Room Number</mat-label>
+        <mat-select [disabled]="roomType.invalid" formControlName="roomId" matNativeControl required>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.regularRoom" value="1">Room 1</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.regularRoom" value="2">Room 2</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.regularRoom" value="3">Room 3</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.regularRoom" value="4">Room 4</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.regularRoom" value="5">Room 5</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.regularRoom" value="6">Room 6</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.regularRoom" value="7">Room 7</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.regularRoom" value="8">Room 8</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.regularRoom" value="9">Room 9</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.regularRoom" value="10">Room 10</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.regularRoom" value="11">Room 11</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.regularRoom" value="12">Room 12</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.regularRoom" value="13">Room 13</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.regularRoom" value="14">Room 14</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.regularRoom" value="15">Room 15</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.suiteRoom" value="16">Room 16</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.suiteRoom" value="17">Room 17</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.suiteRoom" value="18">Room 18</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.suiteRoom" value="19">Room 19</mat-option>
+            <mat-option *ngIf="this.todoForm.get('roomType').value===this.suiteRoom" value="20">Room 20</mat-option>
+        </mat-select>
+        <mat-error *ngIf="roomId.invalid">
+            Please choose a room
+        </mat-error>
+      </mat-form-field>
+
+    <mat-form-field class="newLine">
+        <mat-label>Number Of Nights: </mat-label>
+        <input matInput placeholder="Insert number of nights" formControlName="numberOfNights">
+        <mat-error *ngIf="numberOfNights.invalid">
+            Please insert a valid number
+        </mat-error>
+    </mat-form-field>
+    
+    <div class="buttons">
+        <div class="create">
+          <button
+            type="submit"
+            mat-raised-button
+            color="primary"
+            class="create-raised"
+            [disabled]="todoForm.invalid">
+            <h4 class="create-button">APPLY</h4>
+          </button>
+        </div>
+      </div>
+
+</form>
+
+</div>
+<div  *ngIf="basicUser.roomId!==null || basicUser.roomId!==0" class="gif">
+    <img src="../../assets/welcome2.gif">
+</div>
+
+</div>

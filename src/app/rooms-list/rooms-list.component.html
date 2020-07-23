@@ -1,0 +1,90 @@
+<div class="create-title">REGULAR ROOMS</div>
+<table
+  *ngIf="regularRoomList.length >= 1"
+  mat-table
+  [dataSource]="regularRoomList"
+  matSort
+  class="mat-elevation-z8"
+>
+  <ng-container matColumnDef="roomId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>ROOM ID.</th>
+    <td mat-cell *matCellDef="let regularRoom">{{ regularRoom.roomId }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="numberOfBeds">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>NUM OF BEDS</th>
+    <td mat-cell *matCellDef="let regularRoom">{{ regularRoom.numberOfBeds }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="hairDryer">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>HAIR DRYER</th>
+    <td mat-cell *matCellDef="let regularRoom">{{ regularRoom.hairDryer }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="bathTub">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>BATH TUB</th>
+    <td mat-cell *matCellDef="let regularRoom">{{ regularRoom.bathTub }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>PRICE ($)</th>
+    <td mat-cell *matCellDef="let regularRoom">{{ regularRoom.price }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="roomType">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>ROOM TYPE</th>
+    <td mat-cell *matCellDef="let regularRoom">{{ regularRoom.roomType }}</td>
+  </ng-container>
+  <ng-container matColumnDef="available">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>AVAILABLE</th>
+    <td mat-cell *matCellDef="let regularRoom">{{ regularRoom.available }}</td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+<div class="create-title">SUITE ROOMS</div>
+<table
+  *ngIf="suiteRoomList.length >= 1"
+  mat-table
+  [dataSource]="suiteRoomList"
+  matSort
+  class="mat-elevation-z8"
+>
+<ng-container matColumnDef="roomId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>ROOM ID.</th>
+    <td mat-cell *matCellDef="let suiteRoom">{{ suiteRoom.roomId }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="numberOfBeds">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>NUM OF BEDS</th>
+    <td mat-cell *matCellDef="let suiteRoom">{{ suiteRoom.numberOfBeds }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="hairDryer">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>HAIR DRYER</th>
+    <td mat-cell *matCellDef="let suiteRoom">{{ suiteRoom.hairDryer }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="bathTub">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>BATH TUB</th>
+    <td mat-cell *matCellDef="let suiteRoom">{{ suiteRoom.bathTub }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>PRICE ($)</th>
+    <td mat-cell *matCellDef="let suiteRoom">{{ suiteRoom.price }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="roomType">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>ROOM TYPE</th>
+    <td mat-cell *matCellDef="let suiteRoom">{{ suiteRoom.roomType }}</td>
+  </ng-container>
+  <ng-container matColumnDef="available">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>AVAILABLE</th>
+    <td mat-cell *matCellDef="let suiteRoom">{{ suiteRoom.available }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

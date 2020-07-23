@@ -1,0 +1,128 @@
+<div class="registration">
+    <div class="center">
+        <h1 class="center-h1">Registration</h1>
+    </div>
+
+<div class="parent">
+<form [formGroup]="todoForm" (ngSubmit)="submitForm()" class="example-form">
+    <mat-form-field class="newLine" class="example-full-width">
+        <mat-label>Name: </mat-label>
+        <input matInput placeholder="First and Last Name" formControlName="name">
+        <mat-error *ngIf="name.invalid">
+            Please insert both first and last names
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="newLine">
+        <mat-label>Username: </mat-label>
+        <input matInput placeholder="Username" formControlName="username">
+        <mat-error *ngIf="username.invalid">
+            Please insert a valid username
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="newLine">
+        <mat-label>Password: </mat-label>
+        <input matInput type="password" placeholder="Password" formControlName="password">
+        <mat-error *ngIf="password.invalid">
+            Please insert a valid password
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="newLine">
+        <mat-label>PhoneNumber: </mat-label>
+        <input matInput placeholder="PhoneNumber" formControlName="phoneNumber">
+        <mat-error *ngIf="phoneNumber.invalid">
+            Please insert a valid phone number
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="newLine">
+        <mat-label>Email: </mat-label>
+        <input matInput placeholder="Email" formControlName="email">
+        <mat-error *ngIf="email.invalid">
+            Please insert a valid email
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="newLine">
+        <mat-label>Birth Date: </mat-label>
+        <input matInput placeholder="YYYY-MM-DD" formControlName="birthDate">
+        <mat-error *ngIf="birthDate.invalid">
+            Please insert your birth date
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="newLine">
+        <mat-label>Country: </mat-label>
+        <input matInput placeholder="Country" formControlName="country">
+        <mat-error *ngIf="country.invalid">
+            Please insert a valid country
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="newLine">
+        <mat-label>City: </mat-label>
+        <input matInput placeholder="City" formControlName="city">
+        <mat-error *ngIf="city.invalid">
+            Please insert a valid city
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="newLine">
+        <mat-label>Street: </mat-label>
+        <input matInput placeholder="Street" formControlName="street">
+        <mat-error *ngIf="street.invalid">
+            Please insert a valid street
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="newLine">
+        <mat-label>Postal Code: </mat-label>
+        <input matInput placeholder="Postal Code" formControlName="postalCode">
+        <mat-error *ngIf="postalCode.invalid">
+            Please insert a valid postal code
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="newLine">
+        <mat-label>Balance: </mat-label>
+        <input matInput type="password"  matInput placeholder="Balance" formControlName="balance">
+        <mat-error *ngIf="balance.invalid">
+            Please insert a valid balance
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Type Of User</mat-label>
+        <mat-select formControlName="type" matNativeControl required>
+            <mat-option value="Basic">Basic</mat-option>
+            <mat-option  [disabled]="noPremium" value="Premium">Premium</mat-option>
+        </mat-select>
+        <mat-error *ngIf="type.invalid">
+            Please choose a type of user
+        </mat-error>
+      </mat-form-field>
+
+      <div class="buttons">
+        <div class="create">
+          <button
+            type="submit"
+            mat-raised-button
+            color="primary"
+            class="create-raised"
+            [disabled]="todoForm.invalid">
+            <h4 class="create-button">REGISTER</h4>
+          </button>
+        </div>
+      </div>
+
+        <div class="back" (click)="goBack()">
+            <div class="arrow"></div>
+            <div class="text-back">BACK</div>
+          </div>
+</form>
+
+</div>
+
+</div>

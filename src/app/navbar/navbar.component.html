@@ -1,0 +1,15 @@
+<div class="Navbar">
+    <img src="../../assets/loguito.png" class="logo" routerLink="/home"/>
+    <hr>
+    <ul>
+      <li *ngIf="!isAdmin" routerLink="/reservations">Room Reservations</li>
+      <li routerLink="/massages">Massages</li>
+      <li routerLink="/pool-rents">Pool Rents</li>
+      <li routerLink="/room-foods">Room Food Services</li>
+      <li *ngIf="!isAdmin" routerLink="/profile">Profile</li>
+      <li *ngIf="isAdmin" routerLink="/invoices">Invoices</li>
+      <li *ngIf="isAdmin" routerLink="/users">Users</li>
+      <li *ngIf="isAdmin" routerLink="/rooms">Rooms</li>
+    </ul>
+    <button mat-button (click)="logout()">Logout</button>
+</div>

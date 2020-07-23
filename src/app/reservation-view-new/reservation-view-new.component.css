@@ -1,0 +1,136 @@
+table {
+    width: 98%;
+}
+
+.reservation {
+  display: flex;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }  
+
+.parent {
+    display: flex;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 8%;
+    padding-bottom: 3%; 
+    padding-top: 0.3%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.newLine, button {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin-right: 50%;
+}
+
+h4 {
+  padding-top: 10px;
+  width: 150px;
+  color: #8cbdd1;
+  font-weight: bold;
+}
+
+.child-text {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  align-items: center;
+  display: inline-block;
+}
+
+button {
+    background-color: #FFFFFF;
+    border-radius: 10%;
+    border-color: #FFFFFF;
+}
+
+button:hover:enabled {
+    background-color: #E9E9E9;
+    font-weight: bold;
+    transform: 2em 2em;
+}
+
+form input {
+    color: black;
+  }
+
+  /* Change label color on focused */
+  ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: rgb(12, 87, 119);
+  }
+  
+  /* underline border color on focused */
+  ::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple{
+    background-color: white;
+  }
+  
+  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: rgba(12, 87, 119,.5);
+  }
+  
+  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: white;
+  }
+
+  .newLine,
+button {
+    margin-right: 50%;
+}
+
+button {
+    background-color: #FFFFFF;
+    border-radius: 10%;
+    padding: 1.25%;
+    border-color: #FFFFFF;
+}
+
+button:hover:enabled {
+    background-color: #E9E9E9;
+    font-weight: bold;
+    transform: 2em 2em;
+    padding: 1.5%;
+}
+
+.buttons {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.create-button {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.mat-raised-button {
+  background-color: rgb(12, 87, 119);
+}
+
+.gif {
+  width: 27%;
+  margin-left: 33%;
+  margin-top: 1%;
+  padding-bottom: 3%; 
+  padding-left: 10px;
+  padding-right: 20px;
+  text-align: center;
+  background: url("../../assets/welcome2.gif");
+  background-repeat: no-repeat;
+}

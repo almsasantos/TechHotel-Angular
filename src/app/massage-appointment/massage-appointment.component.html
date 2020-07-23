@@ -1,0 +1,31 @@
+<div class="create-container">
+    <form [formGroup]="todoForm" (ngSubmit)="submitForm()">
+      <div class="create-title">MAKE MASSAGE APPOINTMENT</div>
+      <div class="create-fields">
+        <div class="field">
+          <mat-form-field appearance="outline">
+            <mat-label>Type Of Massage</mat-label>
+            <mat-select formControlName="massageType" matNativeControl required>
+                <mat-option value="SWEDISH">Swedish</mat-option>
+                <mat-option value="HOT_STONE">Hot Stone</mat-option>
+                <mat-option value="AROMATHERAPY">Aromatherapy</mat-option>
+                <mat-option value="THAI">Thai</mat-option>
+                <mat-option value="COUPLES">Couples</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="buttons">
+          <div class="create">
+            <button
+              type="submit"
+              mat-raised-button
+              color="primary"
+              class="create-raised"
+              [disabled]="todoForm.invalid">
+              <h4 class="create-button">APPLY</h4>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>

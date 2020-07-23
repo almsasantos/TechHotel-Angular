@@ -1,0 +1,107 @@
+table {
+    width: 98%;
+}
+
+th {
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(12, 87, 119);
+}
+
+td {
+    text-align: center;
+}
+
+.field{
+    padding-left: 3%;
+}
+
+.newLine,
+button {
+    margin-right: 50%;
+}
+
+button {
+    background-color: #FFFFFF;
+    border-radius: 10%;
+    padding: 1.25%;
+    border-color: #FFFFFF;
+}
+
+button:hover:enabled {
+    background-color: #E9E9E9;
+    font-weight: bold;
+    transform: 2em 2em;
+    padding: 1.5%;
+}
+
+.create-container {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: white;
+    margin-bottom: 30px;
+    table-layout: auto;
+    white-space: nowrap;
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+}
+
+.create-fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    table-layout: auto;
+    flex-wrap: wrap;
+    white-space: nowrap;
+}
+
+.buttons {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.create-button {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.back-button {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.mat-raised-button.back-raised {
+    background-color: white;
+}
+
+.mat-raised-button {
+    background-color: rgb(12, 87, 119);
+}
+
+h4.back-button {
+    color: rgb(12, 87, 119);
+    font-weight: bold;
+}
+
+.create-title {
+    font-size: 3rem !important;
+    font-family: bebas !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: #424829;
+}
+
