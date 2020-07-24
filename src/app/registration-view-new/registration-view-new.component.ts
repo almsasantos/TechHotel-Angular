@@ -31,7 +31,7 @@ export class RegistrationViewNewComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(4)]],
       phoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]{9}$')]],
       email: ['', [Validators.required, Validators.pattern(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gm)]],
-      birthDate: ['', [Validators.required]],
+      birthDate: ['', [Validators.required, Validators.pattern(/^([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/)]],
       country: ['', [Validators.required, Validators.minLength(2), Validators.pattern('^[A-z]+$')]],
       city: ['', [Validators.required, Validators.minLength(2), Validators.pattern('^[A-z]+$')]],
       street: ['', [Validators.required, Validators.minLength(5)]],

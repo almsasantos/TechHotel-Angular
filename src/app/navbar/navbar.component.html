@@ -8,8 +8,10 @@
       <li routerLink="/room-foods">Room Food Services</li>
       <li *ngIf="!isAdmin" routerLink="/profile">Profile</li>
       <li *ngIf="isAdmin" routerLink="/invoices">Invoices</li>
+      <li *ngIf="!isAdmin" routerLink="/user-invoices">Invoices</li>
       <li *ngIf="isAdmin" routerLink="/users">Users</li>
       <li *ngIf="isAdmin" routerLink="/rooms">Rooms</li>
+      <li routerLink="/location">Hotel's Location</li>
     </ul>
     <button mat-button (click)="logout()">Logout</button>
 </div>

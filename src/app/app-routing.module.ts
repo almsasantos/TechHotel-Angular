@@ -13,6 +13,7 @@ import { ProfileViewComponent } from './profile-view/profile-view.component';
 import { MapViewComponent } from './map-view/map-view.component';
 import { UsersViewComponent } from './users-view/users-view.component';
 import { RoomsViewComponent } from './rooms-view/rooms-view.component';
+import { UsersInvoicesViewComponent } from './users-invoices-view/users-invoices-view.component';
 import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
@@ -67,6 +68,10 @@ const routes: Routes = [
   {
     path: 'rooms',
     component: RoomsViewComponent
+  },
+  {
+    path: 'user-invoices',
+    component: UsersInvoicesViewComponent
   },
   {
     path: '**',

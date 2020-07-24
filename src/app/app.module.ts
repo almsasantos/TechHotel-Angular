@@ -42,7 +42,9 @@ import { ProfileListComponent } from './profile-list/profile-list.component';
 import { UsersViewComponent } from './users-view/users-view.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { RoomsViewComponent } from './rooms-view/rooms-view.component';
-import { RoomsListComponent } from './rooms-list/rooms-list.component'; 
+import { RoomsListComponent } from './rooms-list/rooms-list.component';
+import { UsersInvoicesViewComponent } from './users-invoices-view/users-invoices-view.component';
+import { UsersInvoicesListComponent } from './users-invoices-list/users-invoices-list.component'; 
 
 @NgModule({
   declarations: [
@@ -71,7 +73,9 @@ import { RoomsListComponent } from './rooms-list/rooms-list.component';
     UsersViewComponent,
     UsersListComponent,
     RoomsViewComponent,
-    RoomsListComponent
+    RoomsListComponent,
+    UsersInvoicesViewComponent,
+    UsersInvoicesListComponent
   ],
   imports: [
     BrowserModule,
