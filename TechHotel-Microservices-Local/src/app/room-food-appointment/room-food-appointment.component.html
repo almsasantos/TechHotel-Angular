@@ -1,0 +1,47 @@
+<div class="create-container">
+    <form [formGroup]="todoForm" (ngSubmit)="submitForm()">
+      <div class="create-title">ROOM FOOD REQUEST</div>
+      <div class="create-fields">
+        <div class="field">
+          <mat-form-field appearance="outline">
+            <mat-label>Plate</mat-label>
+            <mat-select formControlName="foodMenu" matNativeControl required>
+                <mat-option value="STEAK_GRILLED">Steak Grilled</mat-option>
+                <mat-option value="FRESH_SALMON">Fresh Salmon</mat-option>
+                <mat-option value="BEEF_STROGANOFF">Beef Stroganoff</mat-option>
+                <mat-option value="PIZZA_MARGARITA">Pizza Margarita</mat-option>
+                <mat-option value="HOMEMADE_VEGGIE_SOUP">Homemade Veggie Soup</mat-option>
+                <mat-option value="VEGETARIAN_BURGER">Vegetarian Burguer</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+          <div class="field">
+          <mat-form-field appearance="outline">
+            <mat-label>Drink</mat-label>
+            <mat-select formControlName="drinkMenu">
+                <mat-option value="BOTTLE_OF_WATER">Water Bottle</mat-option>
+                <mat-option value="CAPPUCCINO">Capuccino</mat-option>
+                <mat-option value="COFFEE">Coffee</mat-option>
+                <mat-option value="TEA">Tea</mat-option>
+                <mat-option value="BEER">Beer</mat-option>
+                <mat-option value="COCKTAIL">Cocktail</mat-option>
+                <mat-option value="GLASS_RED_WINE">Glass of Red Wine</mat-option>
+                <mat-option value="GLASS_GREEN_WINE">Glass of Green Wine</mat-option>
+            </mat-select>
+          </mat-form-field>
+          </div>
+        </div>
+        <div class="buttons">
+          <div class="create">
+            <button
+              type="submit"
+              mat-raised-button
+              color="primary"
+              class="create-raised"
+              [disabled]="todoForm.invalid">
+              <h4 class="create-button">ENTER</h4>
+            </button>
+          </div>
+        </div>
+    </form>
+  </div>

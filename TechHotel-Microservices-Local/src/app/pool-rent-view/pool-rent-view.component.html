@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="Pool Rents content">
+  <div class="center">
+    <h1 class="center-h1">POOL RENTS</h1>
+  </div>
+
+  <div class="description">
+    <mat-card
+      style="
+        margin: 0 -10rem;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 20px;
+        font-family: description;
+      ">
+     Here you can find all information about pool rents and make you own rent of <b>Floaties</b> and <b>Towels</b>.
+    </mat-card>
+  </div>
+
+   <div class="create-pool-rent">
+    <app-pool-rent-appointment *ngIf="!isAdmin" (poolRentEmiter)="updateList()" [basicRoomIdNum]="basicRoomIdNum" [basicId]="basicId"></app-pool-rent-appointment>
+  </div>
+
+  
+  <div class="child-table">
+  <app-pool-rent-list [poolRentsList]="poolRentsList"></app-pool-rent-list>
+  </div>
+</div>

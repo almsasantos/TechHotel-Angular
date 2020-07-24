@@ -1,0 +1,70 @@
+.button {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    z-index: 99999;
+  }
+
+
+.Landing-page {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 5rem;
+    background-color: #1b1b1b;
+    background-image: url('../../assets/landing3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .header .title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .title h1 {
+    font-size: 30px !important;
+    margin: 0 0 0 4rem;
+    font: 400 24px/32px Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: normal;
+    color: white;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px rgb(12, 87, 119), 0 0 30px rgb(12, 87, 119), 0 0 40px rgb(12, 87, 119), 0 0 55px rgb(12, 87, 119), 0 0 75px rgb(12, 87, 119);
+  }
+  
+  .btn {
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    padding: .5rem 1rem;
+  }
+  
+  .btn:hover {
+    background-color: white;
+    color: rgb(12, 87, 119);
+  }
+  
+  .buttons {
+    width: 17%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  ::ng-deep .about .mat-button-wrapper {
+    color: gray;
+  }
+  
+  ::ng-deep .about .mat-button-wrapper:hover {
+    font-size: 1rem;
+  }

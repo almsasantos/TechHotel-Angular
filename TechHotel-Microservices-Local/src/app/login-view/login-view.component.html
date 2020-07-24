@@ -1,0 +1,23 @@
+<div class="Login">
+    <div class="home" (click)="goHome()">
+      <div class="arrow"></div>
+      <div class="text-home">BACK</div>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" placeholder="Username" />
+        <mat-error>
+          Please enter a valid username
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password" placeholder="Password"/>
+        <mat-error>
+          Please enter a valid password
+        </mat-error>
+      </mat-form-field>
+      <button class="button" type="submit" [disabled]="loginForm.invalid">Log in</button>
+    </form>
+  </div>

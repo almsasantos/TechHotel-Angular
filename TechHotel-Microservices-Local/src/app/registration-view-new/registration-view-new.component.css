@@ -1,0 +1,150 @@
+.registration{
+    background-image: url("../../assets/landing3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.center{
+  background: none;
+}
+
+table {
+    width: 100%;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }  
+
+.parent {
+  display: flex;
+  width: 20%;
+  margin: 0 auto;
+  padding-top: 0.3%;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.newLine, button {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin-right: 50%;
+}
+
+h4 {
+  padding-top: 10px;
+  width: 150px;
+  color: #8cbdd1;
+  font-weight: bold;
+}
+
+.child-text {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  align-items: center;
+  display: inline-block;
+}
+
+
+button {
+    background-color: #FFFFFF;
+    border-radius: 10%;
+    padding: 1.25%;
+    border-color: #FFFFFF;
+}
+
+button:hover:enabled {
+    background-color: #E9E9E9;
+    font-weight: bold;
+    transform: 2em 2em;
+    padding: 1.5%;
+}
+
+.buttons {
+  margin-left: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.create-button {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.mat-raised-button {
+  background-color: rgb(12, 87, 119);
+}
+
+form input {
+    color: black;
+  }
+
+  /* Change label color on focused */
+  ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: rgb(12, 87, 119);
+  }
+  
+  /* underline border color on focused */
+  ::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple{
+    background-color: white;
+  }
+  
+  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: rgba(12, 87, 119,.5);
+  }
+  
+  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: white;
+  }
+
+  .back {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .back:hover {
+    transform: scale(1.1);
+  }
+  
+  .back .arrow {
+    width: 2vmin;
+    height: 2vmin;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+  }
+  
+  .back .arrow::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-width: 0.8vmin 0.8vmin 0 0;
+    border-style: solid;
+    border-color: #fafafa;
+    display: block;
+    transform-origin: 100% 0;
+  }
+  
+  .back .text-back {
+    margin: 0 0 .5rem .5rem;
+    color: white;
+    font-size: 1.3rem;
+  }

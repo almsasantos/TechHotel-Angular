@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="profile content">
+  <div class="center">
+    <h1 class="center-h1">PROFILE {{ this.username }}</h1>
+  </div>
+
+  <div class="description">
+    <mat-card
+      style="
+        margin: 0 -10rem;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 20px;
+        font-family: description;">
+    <p> Hi there! Thank you for joying our crew. Our team hopes you'll have an awesome and enjoyable stay.</p>
+         <hr>
+         <p>Don't forget to check our services.</p>
+    </mat-card>
+  </div>
+  
+  <app-profile-list [basicUser]="basicUser"></app-profile-list>
+  
+</div>

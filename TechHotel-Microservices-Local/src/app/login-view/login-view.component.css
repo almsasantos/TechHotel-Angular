@@ -1,0 +1,103 @@
+.Login {
+    background-image: url("../../assets/landing3.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .Login form {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    bottom: 20%;
+    left: 37%;
+    position: absolute;
+  }
+  
+  .Login form input {
+    color: white;
+  }
+  
+  .mat-form-field {
+    margin-bottom: 1rem;
+  }
+  
+  /* Change label color on focused */
+  .mat-form-field.mat-focused .mat-form-field-label {
+    color: white;
+  }
+  
+  /* underline border color on focused */
+  .Login ::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+    background-color: white;
+  }
+  
+  .Login ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: white;
+  }
+  
+  .Login ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: white;
+  }
+  
+  .Login ::ng-deep .mat-input-element::placeholder{
+      color: gray;
+  }
+  
+  .Login form .button {
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 0;
+    background-color:rgb(12, 87, 119);
+    color: white;
+    transition: all .2s ease-in-out;
+  }
+  
+  .Login form .button:enabled {
+    box-shadow: 0 0 10px #cbf6d5, 0 0 30px  rgb(12, 87, 119), 0 0 60px  rgb(12, 87, 119);
+    color:  rgb(12, 87, 119);
+    background-color: #cbf6d5;
+  }
+  
+  .home {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .home:hover {
+    transform: scale(1.1);
+  }
+  
+  .home .arrow {
+    width: 2vmin;
+    height: 2vmin;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+  }
+  
+  .home .arrow::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-width: 0.8vmin 0.8vmin 0 0;
+    border-style: solid;
+    border-color: #fafafa;
+    display: block;
+    transform-origin: 100% 0;
+  }
+  
+  .home .text-home {
+    margin: 0 0 .5rem .5rem;
+    color: white;
+    font-size: 1.3rem;
+  }
+  
+  

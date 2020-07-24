@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="Room Foods content">
+  <div class="center">
+    <h1 class="center-h1">ROOM FOOD SERVICES</h1>
+  </div>
+
+  <div class="description">
+    <mat-card
+      style="
+        margin: 0 -10rem;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 20px;
+        font-family: description;
+      ">
+    Ask for a room food service with our amazing foods all listed bellow.
+    </mat-card>
+  </div>
+
+   <div class="create-room-food">
+    <app-room-food-appointment *ngIf="!isAdmin" (roomFoodEmiter)="updateList()" [basicRoomIdNum]="basicRoomIdNum" [basicId]="basicId"></app-room-food-appointment>
+  </div>
+
+  
+  <div class="child-table">
+  <app-room-food-list [roomFoodsList]="roomFoodsList"></app-room-food-list>
+  </div>
+</div>

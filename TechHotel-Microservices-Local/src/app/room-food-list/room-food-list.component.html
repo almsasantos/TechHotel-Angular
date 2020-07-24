@@ -1,0 +1,84 @@
+<table
+  *ngIf="roomFoodsList.length >= 1"
+  mat-table
+  [dataSource]="roomFoodsList"
+  matSort
+  class="mat-elevation-z8"
+>
+  <ng-container matColumnDef="activityId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> ROOM SERVICE ID.</th>
+    <td mat-cell *matCellDef="let roomFood">{{ roomFood.activityId }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="userId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>USER ID</th>
+    <td mat-cell *matCellDef="let roomFood">{{ roomFood.userId }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="roomId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>ROOM ID.</th>
+    <td mat-cell *matCellDef="let roomFood">{{ roomFood.roomId }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="totalPrice">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>AMOUNT ($)</th>
+    <td mat-cell *matCellDef="let roomFood">{{ roomFood.totalPrice["amount"] }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="foodMenu">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>FOOD MENU</th>
+    <td mat-cell *matCellDef="let roomFood">{{ roomFood.foodMenu }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="drinkMenu">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>DRINK MENU</th>
+    <td mat-cell *matCellDef="let roomFood">{{ roomFood.drinkMenu }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="delivered">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>DELIVERED</th>
+    <td mat-cell *matCellDef="let roomFood">{{ roomFood.delivered }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+<table
+  *ngIf="roomFoodsList.length == 0"
+  mat-table
+  [dataSource]="roomFoodsList"
+  matSort
+  class="mat-elevation-z8"
+>  
+<ng-container matColumnDef="activityId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> ROOM SERVICE ID.</th>
+  </ng-container>
+
+  <ng-container matColumnDef="userId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>USER ID</th>
+  </ng-container>
+
+  <ng-container matColumnDef="roomId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>ROOM ID.</th>
+  </ng-container>
+
+  <ng-container matColumnDef="totalPrice">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>AMOUNT ($)</th>
+  </ng-container>
+
+  <ng-container matColumnDef="foodMenu">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>FOOD MENU</th>
+  </ng-container>
+
+  <ng-container matColumnDef="drinkMenu">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>DRINK MENU</th>
+  </ng-container>
+
+  <ng-container matColumnDef="delivered">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>DELIVERED</th>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

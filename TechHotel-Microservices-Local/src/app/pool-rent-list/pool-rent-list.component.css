@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+    table-layout: auto;
+    white-space: nowrap;
+    margin-top: 3%;
+}
+
+th {
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(12, 87, 119);;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix {
+    width: 8rem !important;
+}

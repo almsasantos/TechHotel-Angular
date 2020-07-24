@@ -1,0 +1,205 @@
+<div class="create-title">BASIC USERS</div>
+<table
+  *ngIf="basicUserList.length >= 1"
+  mat-table
+  [dataSource]="basicUserList"
+  matSort
+  class="mat-elevation-z8"
+>
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>USER ID.</th>
+    <td mat-cell *matCellDef="let basicUser">{{ basicUser.id }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>NAME</th>
+    <td mat-cell *matCellDef="let basicUser">{{ basicUser.name }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="username">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>USERNAME</th>
+    <td mat-cell *matCellDef="let basicUser">{{ basicUser.username }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="typeOfUser">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>TYPE OF USER</th>
+    <td mat-cell *matCellDef="let basicUser">{{ basicUser.typeOfUser }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="country">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>COUNTRY</th>
+    <td mat-cell *matCellDef="let basicUser">{{ basicUser.address['country'] }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="city">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>CITY</th>
+    <td mat-cell *matCellDef="let basicUser">{{ basicUser.address['city'] }}</td>
+  </ng-container>
+  <ng-container matColumnDef="registrationDate">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>REGISTRATION DATE</th>
+    <td mat-cell *matCellDef="let basicUser">{{ basicUser.registrationDate }}</td>
+  </ng-container>
+  <ng-container matColumnDef="roomId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>ROOM ID.</th>
+    <td mat-cell *matCellDef="let basicUser">{{ basicUser.roomId }}</td>
+  </ng-container>
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>BLOCK USER</th>
+    <td mat-cell *matCellDef="let basicUser"><button
+      (click)="deleteBasic(basicUser.id)"
+      mat-raised-button
+      color="primary"
+      class="create-raised">Block</button></td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+<table
+  *ngIf="basicUserList.length == 0"
+  mat-table
+  [dataSource]="basicUserList"
+  matSort
+  class="mat-elevation-z8"
+>  
+<ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>USER ID.</th>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>NAME</th>
+  </ng-container>
+
+  <ng-container matColumnDef="username">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>USERNAME</th>
+  </ng-container>
+
+  <ng-container matColumnDef="typeOfUser">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>TYPE OF USER</th>
+  </ng-container>
+
+  <ng-container matColumnDef="country">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>COUNTRY</th>
+  </ng-container>
+
+  <ng-container matColumnDef="city">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>CITY</th>
+  </ng-container>
+  <ng-container matColumnDef="registrationDate">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>REGISTRATION DATE</th>
+  </ng-container>
+  <ng-container matColumnDef="roomId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>ROOM ID.</th>
+  </ng-container>
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>BLOCK USER</th>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+
+<div class="create-title">PREMIUM USERS</div>
+<table
+  *ngIf="premiumUserList.length >= 1"
+  mat-table
+  [dataSource]="premiumUserList"
+  matSort
+  class="mat-elevation-z8"
+>
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>USER ID.</th>
+    <td mat-cell *matCellDef="let premiumUser">{{ premiumUser.id }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>NAME</th>
+    <td mat-cell *matCellDef="let premiumUser">{{ premiumUser.name }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="username">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>USERNAME</th>
+    <td mat-cell *matCellDef="let premiumUser">{{ premiumUser.username }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="typeOfUser">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>TYPE OF USER</th>
+    <td mat-cell *matCellDef="let premiumUser">{{ premiumUser.typeOfUser }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="country">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>COUNTRY</th>
+    <td mat-cell *matCellDef="let premiumUser">{{ premiumUser.address['country'] }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="city">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>CITY</th>
+    <td mat-cell *matCellDef="let premiumUser">{{ premiumUser.address['city'] }}</td>
+  </ng-container>
+  <ng-container matColumnDef="registrationDate">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>REGISTRATION DATE</th>
+    <td mat-cell *matCellDef="let premiumUser">{{ premiumUser.registrationDate }}</td>
+  </ng-container>
+  <ng-container matColumnDef="roomId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>ROOM ID.</th>
+    <td mat-cell *matCellDef="let premiumUser">{{ premiumUser.roomId }}</td>
+  </ng-container>
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>BLOCK USER</th>
+    <td mat-cell *matCellDef="let premiumUser"><button
+      (click)="deletePremium(premiumUser.id)"
+      mat-raised-button
+      color="primary"
+      class="create-raised">Block</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+<table
+  *ngIf="premiumUserList.length == 0"
+  mat-table
+  [dataSource]="premiumUserList"
+  matSort
+  class="mat-elevation-z8"
+>
+<ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>USER ID.</th>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>NAME</th>
+  </ng-container>
+
+  <ng-container matColumnDef="username">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>USERNAME</th>
+  </ng-container>
+
+  <ng-container matColumnDef="typeOfUser">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>TYPE OF USER</th>
+  </ng-container>
+
+  <ng-container matColumnDef="country">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>COUNTRY</th>
+  </ng-container>
+
+  <ng-container matColumnDef="city">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>CITY</th>
+  </ng-container>
+  <ng-container matColumnDef="registrationDate">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>REGISTRATION DATE</th>
+  </ng-container>
+  <ng-container matColumnDef="roomId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>ROOM ID.</th>
+  </ng-container>
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>BLOCK USER</th>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

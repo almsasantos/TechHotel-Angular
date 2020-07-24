@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<div class="Massages content">
+  <div class="center">
+    <h1 class="center-h1">Massages</h1>
+  </div>
+
+  <div class="description">
+    <mat-card
+      style="
+        margin: 0 -10rem;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 20px;
+        font-family: description;
+      "
+    >
+     Here you can find all information about massages and make a new <b>massage appointment</b>.
+    </mat-card>
+  </div>
+
+   <div class="create-massage">
+    <app-massage-appointment *ngIf="!isAdmin" (massageEmiter)="updateList()" [isAdmin]="isAdmin" [basicRoomIdNum]="basicRoomIdNum" [basicId]="basicId"></app-massage-appointment>
+  </div>
+
+  
+  <div class="child-table">
+  <app-massage-list [massageList]="massageList"></app-massage-list>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="Room Foods content">
+  <div class="center">
+    <h1 class="center-h1">HOTEL ROOMS</h1>
+  </div>
+
+  <div class="description">
+    <mat-card
+      style="
+        margin: 0 -10rem;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 20px;
+        font-family: description;
+      ">
+    Only available for Admins: See all hotel rooms and its details
+    </mat-card>
+  </div>
+
+  <div class="child-table">
+    <app-rooms-list [regularRoomList]="regularRoomList" [suiteRoomList]="suiteRoomList"></app-rooms-list>
+</div>
+</div>

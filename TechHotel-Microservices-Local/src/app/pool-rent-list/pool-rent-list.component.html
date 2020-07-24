@@ -1,0 +1,102 @@
+<table
+  *ngIf="poolRentsList.length >= 1"
+  mat-table
+  [dataSource]="poolRentsList"
+  matSort
+  class="mat-elevation-z8"
+>
+  <ng-container matColumnDef="activityId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> POOL RENT ID.</th>
+    <td mat-cell *matCellDef="let poolRent">{{ poolRent.activityId }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="userId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>USER ID</th>
+    <td mat-cell *matCellDef="let poolRent">{{ poolRent.userId }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="roomId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>ROOM ID.</th>
+    <td mat-cell *matCellDef="let poolRent">{{ poolRent.roomId }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="totalPrice">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>AMOUNT ($)</th>
+    <td mat-cell *matCellDef="let poolRent">{{ poolRent.totalPrice["amount"] }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="floatiesNum">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>FLOATIES NUM</th>
+    <td mat-cell *matCellDef="let poolRent">{{ poolRent.floatiesNum }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="towelNum">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>TOWEL NUM</th>
+    <td mat-cell *matCellDef="let poolRent">{{ poolRent.towelNum }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="beginOfActivity">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>BEGIN</th>
+    <td mat-cell *matCellDef="let poolRent">{{ poolRent.beginOfActivity }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="duration">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>DURATION</th>
+    <td mat-cell *matCellDef="let poolRent">{{ poolRent.duration }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="endOfActivity">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>END</th>
+    <td mat-cell *matCellDef="let poolRent">{{ poolRent.endOfActivity }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+<table
+  *ngIf="poolRentsList.length == 0"
+  mat-table
+  [dataSource]="poolRentsList"
+  matSort
+  class="mat-elevation-z8"
+>
+<ng-container matColumnDef="activityId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> POOL RENT ID.</th>
+  </ng-container>
+
+  <ng-container matColumnDef="userId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>USER ID</th>
+  </ng-container>
+
+  <ng-container matColumnDef="roomId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>ROOM ID.</th>
+  </ng-container>
+
+  <ng-container matColumnDef="totalPrice">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>AMOUNT ($)</th>
+  </ng-container>
+
+  <ng-container matColumnDef="floatiesNum">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>FLOATIES NUM</th>
+  </ng-container>
+
+  <ng-container matColumnDef="towelNum">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>TOWEL NUM</th>
+  </ng-container>
+
+  <ng-container matColumnDef="beginOfActivity">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>BEGIN</th>
+  </ng-container>
+
+  <ng-container matColumnDef="duration">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>DURATION</th>
+  </ng-container>
+
+  <ng-container matColumnDef="endOfActivity">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>END</th>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
