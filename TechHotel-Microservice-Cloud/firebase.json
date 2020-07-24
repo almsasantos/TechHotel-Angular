@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/TechHotel",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
